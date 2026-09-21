@@ -1,0 +1,133 @@
+<section class="ritual" id="ritual">
+  <div class="ritual__head reveal">
+    <p class="kicker">THE SCULPT RITUAL</p>
+    <h2 class="ritual__title">Three pieces. <i>One second skin.</i></h2>
+    <p class="ritual__lead">Engineered as one system — train, recover, repeat.</p>
+  </div>
+
+  <div class="ritual__list">
+    <article class="step reveal">
+      <div class="step__img" data-tilt>
+        <img src="{{ 'seated.png' | asset_url }}" alt="TechActive Sculpt seamless bra" loading="lazy" width="800" height="1200" style="object-position:50% 18%" />
+      </div>
+      <div class="step__body">
+        <p class="step__tag">WEAR</p>
+        <h3>The Sculpt Bra</h3>
+        <p>Medium support, clean scoop neckline. No hardware, no digging — just a locked-in feel.</p>
+        <a href="/product.html" class="step__link">See more →</a>
+      </div>
+    </article>
+
+    <article class="step reveal">
+      <div class="step__img" data-tilt>
+        <img src="{{ 'hero-full.png' | asset_url }}" alt="TechActive Sculpt high-waist legging" loading="lazy" width="800" height="1200" style="object-position:50% 72%" />
+      </div>
+      <div class="step__body">
+        <p class="step__tag">TRAIN</p>
+        <h3>The Sculpt Legging</h3>
+        <p>High-rise and squat-proof with a no-slip waistband that stays put through every rep.</p>
+        <a href="/product.html" class="step__link">See more →</a>
+      </div>
+    </article>
+
+    <article class="step reveal">
+      <div class="step__img" data-tilt>
+        <img src="{{ 'collage.png' | asset_url }}" alt="TechActive Sculpt set from every angle" loading="lazy" width="800" height="800" />
+      </div>
+      <div class="step__body">
+        <p class="step__tag">RECOVER</p>
+        <h3>The Full Set</h3>
+        <p>Bra and legging tuned to work together — soft enough for rest days, strong enough for leg day.</p>
+        <a href="/product.html" class="step__link">See more →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .ritual {
+    padding: 100px 40px;
+    background-color: {{ settings.color_body_bg }};
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .ritual__head {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .ritual__head .kicker {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: {{ settings.color_primary }};
+    margin-bottom: 16px;
+  }
+  .ritual__title {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 2.5rem;
+    color: {{ settings.color_headings }};
+    font-style: italic;
+  }
+  .ritual__lead {
+    font-family: {{ settings.base_family }}, sans-serif;
+    color: {{ settings.color_body_text }};
+    margin-top: 16px;
+  }
+  .ritual__list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .step {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+  }
+  .step:hover { transform: translateY(-4px); }
+  .step__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  .step__tag {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: {{ settings.color_primary }};
+    margin-bottom: 8px;
+  }
+  .step__body h3 {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 1.5rem;
+    color: {{ settings.color_headings }};
+    margin: 8px 0;
+  }
+  .step__body p {
+    font-family: {{ settings.base_family }}, sans-serif;
+    color: {{ settings.color_body_text }};
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+  .step__link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-weight: 600;
+    color: {{ settings.color_primary }};
+    text-decoration: underline;
+    font-size: 0.85rem;
+  }
+  @media (max-width: 768px) {
+    .ritual__list { flex-direction: column; align-items: center; }
+  }
+</style>

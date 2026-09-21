@@ -1,0 +1,9 @@
+<div class="product-grid-item">
+  <a href="{{ product.url }}" class="product-grid-item__link">
+    <div class="product-grid-item__image">
+      {{ product.featured_image | img_url: 'medium' | img_tag: product.title }}
+    </div>
+    <h3 class="product-grid-item__title">{{ product.title }}</h3>
+    <p class="product-grid-item__price">{{ product.price | money }}</p>
+  </a>
+</div>

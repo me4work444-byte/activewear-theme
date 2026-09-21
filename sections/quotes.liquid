@@ -1,0 +1,66 @@
+<section class="quote" id="testimonial">
+  <blockquote>
+    <span class="quote__mark">"</span>
+    <p id="quoteText">I forgot I was wearing anything. That's the whole review.</p>
+    <cite class="quote__cite">— MARA K., SCULPT COLLECTION — NAVY</cite>
+  </blockquote>
+  <div class="quote__nav">
+    <button class="quote__btn" data-dir="-1" aria-label="Previous">←</button>
+    <button class="quote__btn" data-dir="1" aria-label="Next">→</button>
+  </div>
+</section>
+
+<style>
+  .quote {
+    padding: 80px 40px;
+    background-color: {{ settings.color_body_bg }};
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .quote blockquote {
+    font-family: {{ settings.header_family }}, serif;
+    font-style: italic;
+  }
+  .quote__mark {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 3rem;
+    color: {{ settings.color_primary }};
+  }
+  .quote p {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 1.4rem;
+    color: {{ settings.color_body_text }};
+    line-height: 1.6;
+    margin: 16px 0;
+  }
+  .quote__cite {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.9rem;
+    color: {{ settings.color_primary }};
+    font-style: normal;
+    letter-spacing: 0.05em;
+  }
+  .quote__nav {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .quote__btn {
+    font-family: {{ settings.base_family }}, sans-serif;
+    background: none;
+    border: 2px solid {{ settings.color_primary }};
+    color: {{ settings.color_primary }};
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  .quote__btn:hover {
+    background-color: {{ settings.color_primary }};
+    color: {{ settings.color_button_text }};
+  }
+</style>

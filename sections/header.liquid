@@ -1,0 +1,124 @@
+<header class="nav" id="nav">
+  <a href="/" class="nav__logo">TECHACTIVE<span>.</span></a>
+  <nav class="nav__links">
+    <a href="/#hero">Ritual</a>
+    <a href="/#product">Shop</a>
+    <a href="/#story">Story</a>
+    <a href="/faq.html">FAQ</a>
+  </nav>
+  <a href="/product.html" class="nav__cta magnetic">Shop All</a>
+  <button class="nav__burger" id="burger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/#ritual">Ritual</a>
+  <a href="/#product">Shop</a>
+  <a href="/#story">Story</a>
+  <a href="/faq.html">FAQ</a>
+</div>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: {{ settings.color_body_bg }};
+    border-bottom: 1px solid {{ settings.color_border }};
+    transition: all 0.3s ease;
+  }
+  .nav.is-scrolled {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+  .nav__logo {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: {{ settings.color_headings }};
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  .nav__links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav__links a {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: {{ settings.color_body_text }};
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav__links a:hover {
+    color: {{ settings.color_primary }};
+  }
+  .nav__cta {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background-color: {{ settings.color_primary }};
+    color: {{ settings.color_button_text }};
+    padding: 12px 28px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .nav__cta:hover { opacity: 0.85; }
+  .nav__burger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: {{ settings.color_body_text }};
+    transition: all 0.3s;
+  }
+  @media (max-width: 900px) {
+    .nav__links, .nav__cta { display: none; }
+    .nav__burger { display: flex; }
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: {{ settings.color_body_bg }};
+    z-index: 200;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.is-open { display: flex; }
+  .mobile-menu a {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 1.2rem;
+    color: {{ settings.color_body_text }};
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: {{ settings.color_primary }}; }
+</style>

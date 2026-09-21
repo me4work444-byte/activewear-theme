@@ -1,0 +1,121 @@
+<section class="product" id="product">
+  <div class="product__head reveal">
+    <p class="kicker">SHOP THE DROP</p>
+    <h2 class="product__title" data-split>Sculpted for <i>every rep</i></h2>
+  </div>
+
+  <a class="cover reveal" href="/product.html" aria-label="View the Sculpt Collection">
+    <div class="cover__img">
+      <img src="{{ 'hero-full.png' | asset_url }}" alt="Sculpt Collection" />
+    </div>
+    <div class="cover__copy">
+      <p class="tile__tag">THE COLLECTION</p>
+      <h3 class="cover__name">Sculpt Collection</h3>
+      <p class="cover__blurb">
+        One seamless bra and one high-rise legging, engineered to work as a
+        single second skin. Squat-proof navy, zero front seams, and a
+        no-slip waistband that stays put from warm-up to cool-down.
+      </p>
+      <ul class="cover__points">
+        <li>Seamless high-density knit — no chafe, no hardware</li>
+        <li>4-way stretch with squat-proof opacity, guaranteed</li>
+        <li>Survives 30+ wash-and-train cycles before it earns the tag</li>
+      </ul>
+      <div class="cover__row">
+        <span class="cover__badge">$96 <small>full set</small></span>
+        <span class="cover__link">View product →</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<style>
+  .product {
+    padding: 100px 40px;
+    background-color: {{ settings.color_body_bg }};
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .product__head {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .product__head .kicker {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: {{ settings.color_primary }};
+    margin-bottom: 16px;
+  }
+  .product__title {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 2.5rem;
+    color: {{ settings.color_headings }};
+  }
+  .cover {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+  }
+  .cover__img img {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+  }
+  .cover__name {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 2rem;
+    color: {{ settings.color_headings }};
+    margin: 8px 0;
+  }
+  .cover__blurb {
+    font-family: {{ settings.base_family }}, sans-serif;
+    color: {{ settings.color_body_text }};
+    line-height: 1.7;
+    margin: 16px 0;
+  }
+  .cover__points {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+  }
+  .cover__points li {
+    font-family: {{ settings.base_family }}, sans-serif;
+    color: {{ settings.color_body_text }};
+    padding: 4px 0;
+  }
+  .cover__points li::before {
+    content: "✓ ";
+    color: {{ settings.color_primary }};
+    font-weight: bold;
+  }
+  .cover__row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .cover__badge {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 1.5rem;
+    color: {{ settings.color_primary }};
+  }
+  .cover__link {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-weight: 600;
+    color: {{ settings.color_primary }};
+    text-decoration: underline;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 768px) {
+    .cover { flex-direction: column; text-align: center; }
+    .cover__img img { width: 200px; }
+  }
+</style>

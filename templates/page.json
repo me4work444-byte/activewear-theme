@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "page-content": {
+      "type": "page-content",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true
+      }
+    }
+  },
+  "order": ["page-content"]
+}

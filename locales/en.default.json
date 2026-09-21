@@ -1,0 +1,43 @@
+{
+  "general": {
+    "skip_to_content": "Skip to content",
+    "search": "Search",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "products": {
+    "add_to_cart": "Add to cart",
+    "sold_out": "Sold out",
+    "on_sale": "On sale",
+    "vendor": "Vendor",
+    "type": "Type",
+    "sku": "SKU",
+    "share": "Share",
+    "quantity": "Quantity"
+  },
+  "cart": {
+    "items": "items",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "checkout": "Checkout",
+    "empty": "Your cart is empty",
+    "note": "Order notes",
+    "update": "Update",
+    "remove": "Remove"
+  },
+  "footer": {
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "tiktok": "TikTok"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "search": "Search questions..."
+  }
+}

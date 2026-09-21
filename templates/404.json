@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "page-not-found": {
+      "type": "page-not-found",
+      "settings": {}
+    }
+  },
+  "order": ["page-not-found"]
+}

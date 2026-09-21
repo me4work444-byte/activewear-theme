@@ -1,0 +1,15 @@
+{
+  "sticky_header": true,
+  "header_family": "Fraunces",
+  "base_family": "Manrope",
+  "color_body_bg": "#FAF7F2",
+  "color_headings": "#B8943F",
+  "color_body_text": "#3D3020",
+  "color_primary": "#B8943F",
+  "color_button_text": "#FAF7F2",
+  "color_border": "#E8DFC8",
+  "section_padding_size": "large",
+  "show_top_button": true,
+  "custom_style": "",
+  "custom_script": ""
+}

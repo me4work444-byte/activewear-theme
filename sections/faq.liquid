@@ -1,0 +1,150 @@
+<section class="faq" id="faq">
+  <div class="faq__head reveal">
+    <p class="kicker">QUESTIONS</p>
+    <h2 class="faq__title">Honest answers</h2>
+  </div>
+  <div class="faq__list reveal">
+    <div class="faq__item">
+      <button class="faq__q">
+        <span>How is the sizing?</span>
+        <span class="faq__plus"></span>
+      </button>
+      <div class="faq__a">
+        <div class="faq__a-inner">
+          Run true to size with a relaxed athletic cut. If you're between sizes, size down for a hermetic race fit, size up for lounge. Every piece comes with free exchanges for 60 days — no fine print.
+        </div>
+      </div>
+    </div>
+    <div class="faq__item">
+      <button class="faq__q">
+        <span>What are the fabrics made of?</span>
+        <span class="faq__plus"></span>
+      </button>
+      <div class="faq__a">
+        <div class="faq__a-inner">
+          Our Sculpt seamless knit blends high-density nylon with elastane for 4-way stretch. Zero front seams, squat-proof opacity, and a brushed second-skin hand feel — no hardware, no itchy tags, no distractions.
+        </div>
+      </div>
+    </div>
+    <div class="faq__item">
+      <button class="faq__q">
+        <span>Does it really dry that fast?</span>
+        <span class="faq__plus"></span>
+      </button>
+      <div class="faq__a">
+        <div class="faq__a-inner">
+          Yes. The seamless knit wicks sweat to the surface and lets it evaporate, so you stay dry from warm-up to cool-down — even on heavy leg days.
+        </div>
+      </div>
+    </div>
+    <div class="faq__item">
+      <button class="faq__q">
+        <span>What's your guarantee?</span>
+        <span class="faq__plus"></span>
+      </button>
+      <div class="faq__a">
+        <div class="faq__a-inner">
+          60-day love-it-or-return-it, no questions. If the seams fatigue from honest training within a year, we replace the piece free.
+        </div>
+      </div>
+    </div>
+    <div class="faq__item">
+      <button class="faq__q">
+        <span>Want the full page?</span>
+        <span class="faq__plus"></span>
+      </button>
+      <div class="faq__a">
+        <div class="faq__a-inner">
+          Sizing charts, shipping times, refunds, how we take payments, fabric care and order tracking — all on the full <a href="/faq.html">FAQ page</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 80px 40px;
+    background-color: {{ settings.color_body_bg }};
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq__head {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .faq__head .kicker {
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: {{ settings.color_primary }};
+    margin-bottom: 16px;
+  }
+  .faq__title {
+    font-family: {{ settings.header_family }}, serif;
+    font-size: 2.5rem;
+    color: {{ settings.color_headings }};
+  }
+  .faq__item {
+    border-bottom: 1px solid {{ settings.color_border }};
+    margin-bottom: 0;
+  }
+  .faq__q {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: {{ settings.base_family }}, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: {{ settings.color_body_text }};
+    text-align: left;
+    transition: color 0.3s;
+  }
+  .faq__q:hover { color: {{ settings.color_primary }}; }
+  .faq__a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .faq__item.is-open .faq__a {
+    max-height: 300px;
+  }
+  .faq__a-inner {
+    font-family: {{ settings.base_family }}, sans-serif;
+    color: {{ settings.color_body_text }};
+    line-height: 1.7;
+    padding: 8px 0 24px;
+  }
+  .faq__a-inner a {
+    color: {{ settings.color_primary }};
+  }
+  .faq__plus::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: {{ settings.color_primary }};
+    transition: transform 0.3s;
+  }
+  .faq__item.is-open .faq__plus::after {
+    content: "−";
+  }
+</style>
+
+<script>
+  $$(".faq__item").forEach((item) => {
+    const q = $(".faq__q", item);
+    if (q) {
+      q.addEventListener("click", () => {
+        const open = item.classList.contains("is-open");
+        $$(".faq__item").forEach((other) => other.classList.remove("is-open"));
+        if (!open) item.classList.add("is-open");
+      });
+    }
+  });
+</script>

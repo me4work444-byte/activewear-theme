@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "section_height": "xlarge",
+        "heading_text": "SCULPT STRONGER",
+        "subtext": "Seamless sculpt · Studio tested",
+        "button_label": "Shop the Drop",
+        "button_link": "/product.html",
+        "image": "hero-full.png"
+      }
+    },
+    "featured-products": {
+      "type": "featured-products",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "Sculpt Collection",
+        "product_handle": "sculpt-collection",
+        "section_style": "section-blank"
+      }
+    },
+    "story": {
+      "type": "story",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "Three pieces. One second skin.",
+        "subtitle": "Engineered as one system — train, recover, repeat."
+      }
+    },
+    "quotes": {
+      "type": "quotes",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "Honest answers",
+        "subtitle": "What real buyers said"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "QUESTIONS"
+      }
+    }
+  },
+  "order": ["hero", "featured-products", "story", "quotes", "faq"]
+}
